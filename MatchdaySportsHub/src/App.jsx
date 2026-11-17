@@ -16,19 +16,11 @@ function App() {
           <Route path="/standings" element={<StandingsPage />} />
           <Route path="/predictions" element={<PredictionsPage />} />
           <Route path="/about" element={<AboutPage />} />
-          <Route
-            path="*"
-            element={
-              <div className="text-center py-5">
-                <h2 className="text-warning fw-bold">404 - Page Not Found</h2>
-                <p className="text-white-50">The route you requested does not exist.</p>
-              </div>
-            }
-          />
+          
         </Routes>
       </main>
 
-      <footer className="text-center py-4 border-top border-secondary text-white-50 mt-auto">
+      <footer className="text-center py-4 border-top border-secondary text-black-50 mt-auto">
         <div className="container">
           <p className="mb-0 small">
             Matchday Sports Hub &copy; 2026 | Built with ❤
