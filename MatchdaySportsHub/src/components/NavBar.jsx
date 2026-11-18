@@ -1,6 +1,10 @@
+import { useContext } from 'react';
 import { NavLink, Link } from 'react-router-dom';
+import { FavoritesContext } from '../context/FavoritesContext';
 
 function NavBar() {
+  const { favoriteIds } = useContext(FavoritesContext);
+
   const navLinkClass = ({ isActive }) =>
     `nav-link px-3 ${isActive ? 'active text-info fw-bold' : 'text-light'}`;
 
@@ -28,7 +32,7 @@ function NavBar() {
         </button>
 
         <div className="collapse navbar-collapse" id="mainNavbar">
-          <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
+          <ul className="navbar-nav ms-auto mb-2 mb-lg-0 align-items-lg-center">
             <li className="nav-item">
               <NavLink to="/" end className={navLinkClass}>
                 Fixtures
@@ -48,6 +52,12 @@ function NavBar() {
               <NavLink to="/about" className={navLinkClass}>
                 About
               </NavLink>
+            </li>
+            <li className="nav-item ms-lg-2">
+              <span className="badge bg-warning text-dark">
+                <i className="bi bi-star-fill me-1"></i>
+                Saved: {favoriteIds.length}
+              </span>
             </li>
           </ul>
         </div>
