@@ -67,7 +67,7 @@ function FilterBar({
                     </select>   
                 </div>
 
-                (/* Reset Btn */)
+                {/* Reset Btn */}
                 <div className="col-md-2">
                     <button
                        type="button"
