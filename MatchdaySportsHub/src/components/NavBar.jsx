@@ -6,16 +6,16 @@ function NavBar() {
   const { favoriteIds } = useContext(FavoritesContext);
 
   const navLinkClass = ({ isActive }) =>
-    `nav-link px-3 ${isActive ? 'active text-info fw-bold' : 'text-light'}`;
+    `nav-link px-3 ${isActive ? 'active text-success fw-bold' : 'text-light'}`;
 
   return (
     <nav
       className="navbar navbar-expand-lg navbar-dark border-bottom border-secondary sticky-top"
-      style={{ backgroundColor: 'rgba(15, 23, 42, 0.9)', backdropFilter: 'blur(12px)' }}
+      style={{ backgroundColor: 'rgba(11, 15, 20, 0.92)', backdropFilter: 'blur(12px)' }}
     >
       <div className="container">
         <Link className="navbar-brand fw-bold d-flex align-items-center gap-2" to="/">
-          <i className="bi bi-trophy-fill text-info"></i>
+          <i className="bi bi-trophy-fill text-success"></i>
           <span>Matchday Sports Hub</span>
         </Link>
 

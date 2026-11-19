@@ -106,9 +106,9 @@ function PredictionsPage() {
   return (
     <div>
       <header className="mb-4">
-        <h2 className="fw-bold">Fan Match Predictions</h2>
+        <h2 className="fw-bold">Match Predictions</h2>
         <p className="text-white-50">
-          Call the scoreline for upcoming fixtures, edit your picks, or delete entries.
+          Predict the scoreline for upcoming fixtures, edit your picks or delete entries.
         </p>
       </header>
 

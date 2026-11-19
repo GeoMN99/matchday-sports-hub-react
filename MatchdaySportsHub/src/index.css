@@ -1,3 +1,13 @@
+:root {
+  --bg-asphalt: #0b0f14;
+  --bg-surface: #131922;
+  --bg-surface-elevated: #19212c;
+  --border-subtle: rgba(255, 255, 255, 0.08);
+  --accent-pitch: #10b981;
+  --accent-pitch-hover: #059669;
+  --accent-floodlight: #f59e0b;
+}
+
 html,
 body,
 #root {
@@ -8,21 +18,76 @@ body,
 }
 
 body {
-  background: radial-gradient(circle at 50% 0%, #1e1b4b 0%, #0f172a 60%, #020617 100%) !important;
-  color: #f8fafc !important;
-  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  background-color: var(--bg-asphalt) !important;
+  background-image: radial-gradient(circle at 85% 10%, rgba(16, 185, 129, 0.08), transparent 40%);
+  color: #f1f5f9 !important;
+  font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
 }
 
+h1,
+h2,
+h3,
+.display-font {
+  font-family: 'Barlow Condensed', sans-serif;
+  letter-spacing: 0.02em;
+}
+
+/* Stadium Hero Banner */
+.stadium-hero {
+  position: relative;
+  border-radius: 1.25rem;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background-color: #111827;
+  background-image:
+    linear-gradient(
+      95deg,
+      rgba(11, 15, 20, 0.96) 0%,
+      rgba(11, 15, 20, 0.84) 52%,
+      rgba(11, 15, 20, 0.45) 100%
+    ),
+    url('https://images.unsplash.com/photo-1522778119026-d647f0596c20?auto=format&fit=crop&w=1600&q=80');
+  background-size: cover;
+  background-position: center 40%;
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.45);
+}
+
+/* cards */
 .glass-card {
-  background: rgba(15, 23, 42, 0.75) !important;
-  backdrop-filter: blur(12px);
-  border: 1px solid rgba(255, 255, 255, 0.1) !important;
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  background: var(--bg-surface) !important;
+  border: 1px solid var(--border-subtle) !important;
+  border-top: 1px solid rgba(255, 255, 255, 0.14) !important;
+  border-radius: 0.9rem !important;
+  transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
 }
 
 .glass-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 10px 25px rgba(0, 240, 255, 0.15) !important;
+  transform: translateY(-3px);
+  border-color: rgba(16, 185, 129, 0.45) !important;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.4) !important;
+}
+
+/* CTA Button */
+.btn-pitch {
+  background-color: var(--accent-pitch);
+  border-color: var(--accent-pitch);
+  color: #052e16;
+  font-weight: 700;
+}
+
+.btn-pitch:hover {
+  background-color: var(--accent-pitch-hover);
+  border-color: var(--accent-pitch-hover);
+  color: #ffffff;
+}
+
+.score-pill {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: 0.05em;
+  background: var(--bg-surface-elevated);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  color: #ffffff;
 }
 
 .team-badge {

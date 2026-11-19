@@ -76,7 +76,7 @@ function MatchCard({ match }) {
             </div>
 
             <div className="px-2">
-              <span className="badge bg-primary fs-6 px-3 py-2">
+              <span className="badge score-pill fs-5 px-3 py-2">
                 {isFinished ? `${intHomeScore} - ${intAwayScore}` : 'VS'}
               </span>
             </div>
@@ -95,7 +95,7 @@ function MatchCard({ match }) {
             </div>
           </div>
 
-          {/* Footer Metadata & Action Buttons */}
+          {/* Card-Footer & Action Buttons */}
           <div className="border-top border-secondary pt-2 mt-3 small text-white-50">
             <div className="d-flex justify-content-between align-items-center mb-3">
               <span>
